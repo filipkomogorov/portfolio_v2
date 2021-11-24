@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filip Komogorov Homepage</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="assets/js/app.js"></script>
   </head>
   <body>
     <header>
-      <nav>
+      <div class="hamburger">
+        <div class="tempitem" id="hamburgerBtn"></div>
+      </div>
+      <nav id="nav">
         <ul>
           <li>Home</li>
           <li>Projects</li>
@@ -18,6 +27,41 @@
       </nav>
     </header>
 
-    <section class="main__landing"></section>
+    <address>
+      <div class="contacts-logos">
+        <a href="https://www.linkedin.com/in/filip-komogorov/" target="_blank"
+          ><img
+            class="contact-logo linkedin"
+            src="assets/img/logolinkedin.png"
+            alt="Logo to LinkedIn Profile"
+        /></a>
+      </div>
+      <div class="contacts-logos">
+        <a href="https://github.com/filipkomogorov" target="_blank"
+          ><img
+            class="contact-logo git"
+            src="assets/img/github.png"
+            alt="Logo to GITHUB Profile"
+        /></a>
+      </div>
+      <div class="contacts-logos">
+        <a href="mailto:filipkomogorov@gmail.com"
+          ><img
+            class="contact-logo"
+            src="assets/img/logogmail.png"
+            alt="Logo to send email to Filip"
+        /></a>
+      </div>
+    </address>
+
+    <section class="main__landing">
+      <h1>Hello there, I'm Filip</h1>
+      <p>
+        I am a Multimedia Design student and a Web Developer located in Aalborg,
+        Denmark. I am inspired to create and realize functional, beautiful and
+        optimized Web solutions, while focusing on best industry practices.
+      </p>
+      <a class="cta" href="projects.html">View my projects</a>
+    </section>
   </body>
 </html>
