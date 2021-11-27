@@ -27,26 +27,105 @@ header {
   position: relative;
 }
 .hamburger {
-  position: absolute;
-  right: 30px;
-  top: 30px;
+  position: fixed;
+  right: 80px;
+  top: 50px;
+  z-index: 100 !important;
+  cursor: pointer;
 }
 
-.tempitem {
+.line {
   width: 50px;
-  height: 50px;
-  background-color: #fafafa;
+  height: 3px;
+  background-color: #aaaaaa;
+}
+
+.line:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.btn-animation .line_1 {
+  transform: translateY(11px) rotate(-45deg);
+}
+
+.btn-animation .line_2 {
+  opacity: 0;
+}
+
+.btn-animation .line_3 {
+  transform: translateY(-11px) rotate(45deg);
+}
+
+.btn-animation,
+.line {
+  transition: all 0.3s;
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   left: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #020202;
   top: 0;
+  opacity: 0;
+  z-index: 10;
+}
+
+nav ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  left: 50px;
+  top: 20%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+nav ul li,
+nav ul li a {
+  display: inline-block;
+}
+
+nav ul li a:after {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #fafafa;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 50%;
+}
+
+nav ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
 }
 
 .addNav {
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  left: 80% !important;
+  top: 0 !important;
+  opacity: 1 !important;
+}
+
+#nav,
+.addNav,
+.nav ul,
+.nav ul li {
+  transition: all 0.5s;
 }
 
 address {
@@ -99,7 +178,8 @@ address {
   width: 48px;
 }
 
-.cta {
+.cta,
+.cta2 {
   position: absolute;
   left: 0;
   right: 0;
@@ -116,4 +196,10 @@ address {
   text-transform: uppercase;
   text-decoration: none;
   line-height: 40px;
+}
+
+.cta2:hover {
+  transform: scale(1.2);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
